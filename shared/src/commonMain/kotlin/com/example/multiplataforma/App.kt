@@ -29,7 +29,7 @@ fun App() {
                 .background(MaterialTheme.colorScheme.primaryContainer)
                 .safeContentPadding()
                 .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
+            horizontalAlignment = Alignment.Start,
         ) {
             Button(onClick = { showContent = !showContent }) {
                 Text("Presionar Boton")
