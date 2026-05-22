@@ -23,25 +23,34 @@ import multiplataforma.shared.generated.resources.compose_multiplatform
 @Preview
 fun App() {
     MaterialTheme {
+
         var showContent by remember { mutableStateOf(true) }
+
         Column(
             modifier = Modifier
                 .background(MaterialTheme.colorScheme.secondaryContainer)
                 .safeContentPadding()
                 .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
+            horizontalAlignment = Alignment.Start,
         ) {
             Button(onClick = { showContent = !showContent }) {
-                Text("Ingresar a EduFlow")
+
+                Text("Ingresar a la plataforma EduFlow")
+
+
+
             }
             AnimatedVisibility(showContent) {
-                val greeting = remember { Greeting().greet() }
+                val greeting = remember()
+                { Greeting().greet() }
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
                     Image(painterResource(Res.drawable.compose_multiplatform), null)
+
                     Text("Bienvenido a EduFlow: $greeting")
+
                 }
             }
         }
