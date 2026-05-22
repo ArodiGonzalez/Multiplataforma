@@ -23,7 +23,7 @@ import multiplataforma.shared.generated.resources.compose_multiplatform
 @Preview
 fun App() {
     MaterialTheme {
-        var showContent by remember { mutableStateOf(false) }
+        var showContent by remember { mutableStateOf(false) } // Controla la visibilidad
         Column(
             modifier = Modifier
                 .background(MaterialTheme.colorScheme.primaryContainer)
